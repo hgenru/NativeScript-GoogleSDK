@@ -1,0 +1,22 @@
+{
+  "name": "nativescript-google-sdk",
+  "version": "0.1.9",
+  "description": "Contains instructions for adding the Google SDKs to a NativeScript project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nativescript",
+    "google",
+    "sdk"
+  ],
+  "nativescript": {
+    "platforms": {
+      "ios": "1.0.0",
+      "android": "1.1.0"
+    }
+  },
+  "author": "Valio Stoychev",
+  "license": "Apache 2.0 license"
+}
