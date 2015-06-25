@@ -27,13 +27,39 @@ The plugin is available for installing as an npm package.
 
 In the command prompt, at the root of the NativeScript project, run the following command.
 
-`tns plugin add nativescript-google-sdk`
+```
+tns plugin add nativescript-google-sdk
+```
 
 TODO - write how to install the GooglePlay services native SDKs.
 
-`tns library add android "path to the GooglePlayServices SDK"`
+```
+tns library add android "path to the GooglePlayServices SDK"
+```
 
-`// support is coming for iOS`
+ - modify the AndroidManifest.xml to include the google play lines in the application section
+ - Change the API_KEY
+ - copy the module from node_moules to tns_modules
+ - modify the main-page.xml file - 
+
+ ```
+ <Page 
+	xmlns="http://www.nativescript.org/tns.xsd"
+	xmlns:googleMapsPlugin="tns_modules/nativescript-google-sdk"
+	>
+  <GridLayout>
+    <googleMapsPlugin:MapView/>
+  </GridLayout>
+</Page>
+```
+and then execute
+```
+tns run android 
+```
+
+```
+// support is coming for iOS
+```
 
 [Back to Top][1]
 
