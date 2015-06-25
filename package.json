@@ -1,8 +1,13 @@
 {
   "name": "nativescript-google-sdk",
-  "version": "0.1.9",
+  "preferGlobal": false,
+  "version": "0.1.10",
   "description": "Contains instructions for adding the Google SDKs to a NativeScript project.",
-  "main": "index.js",
+  "main": "maps.js",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/valentinstoychev/NativeScript-GoogleSDK.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +22,7 @@
       "android": "1.1.0"
     }
   },
+  "analyze" : true,
   "author": "Valio Stoychev",
-  "license": "Apache 2.0 license"
+  "license": "Apache-2.0"
 }
