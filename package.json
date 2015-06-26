@@ -1,7 +1,7 @@
 {
   "name": "nativescript-google-sdk",
   "preferGlobal": false,
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "Contains instructions for adding the Google SDKs to a NativeScript project.",
   "main": "maps.js",
     "repository": {
@@ -18,7 +18,7 @@
   ],
   "nativescript": {
     "platforms": {
-      "ios": "1.0.0",
+      "ios": "1.1.0",
       "android": "1.1.0"
     }
   },
