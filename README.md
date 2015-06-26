@@ -26,7 +26,7 @@ tns plugin add nativescript-google-sdk
 
 Now you have the plugin installed. In this version the plugin is not adding the native Google SDKs, so you will need to add them manualy.
 
-If you are new to GooglePlayServices, please read the [official guide about how to install the native GooglePlay services](https://developers.google.com/maps/documentation/android/start) on your machine.
+If you are new to GooglePlayServices, please read the [official guide about how to install the native GooglePlay services](https://developers.google.com/maps/documentation/android/start) on your machine. Make sure to get the latest SDKs installed to make sure that the entire API will be available to you.
 
 After the GooglePlay services are installed, for Android please run the followng command: 
 
