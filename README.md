@@ -40,14 +40,12 @@ tns library add android "C:\Users\me\AppData\Local\Android\android-sdk\extras\go
 
 This will add the native libraries in the NativeScript project and will make the native API available for consumption in JavaScript.
 
-The next step is to modify the AndroidManifest.xml file. It is located in your project folder in *platforms/android/* folder. Please merge the content of the two ```<application>``` sections into one section only. This is all you need to do in the AndroidManigest.xml file.
+The next step is to modify the AndroidManifest.xml file. It is located in your project folder in *platforms/android/* folder. Please merge the content of the two ```<application>``` sections into one section only. This is all you need to do in the AndroidManifest.xml file.
 
 The next step is to set the GooglePlay API_KEY. It is specific for each app and each user, so you need to get it from the google service. Here is a [tutorial how to obtain that key](https://developers.google.com/maps/documentation/android/signup). 
 
 Set the API_KEY in the AndroidManifest.xml file for the ```<meta-data android:name="com.google.android.geo.API_KEY"``` entry.
 
-Due to a bug in the current CLI tools, you need to manualy copy the plugin contents from the ```/node_modules``` folder to ```/app/tns_modules``` folder where the rest of the modules are.
- 
 You are now done and you can start using the plugin from your application! Follow the next steps to see how to use the plugin and add the maps to your application UI.
 
 ##  Adding the map to the screen.
@@ -57,10 +55,10 @@ Modify the  ```/app/main-page.xml``` file to look like this:
 ```
  <Page 
 	xmlns="http://www.nativescript.org/tns.xsd"
-	xmlns:googleMapsPlugin="tns_modules/nativescript-google-sdk"
+	xmlns:googleSDK="tns_modules/nativescript-google-sdk"
 	>
   <GridLayout>
-    <googleMapsPlugin:MapView/>
+    <googleSDK:MapView/>
   </GridLayout>
 </Page>
 ```
@@ -73,7 +71,7 @@ tns run android
 
 This will show the MapView with its default settings. To set the behavior of the MapView component you need to handle the mapCreated event and configure it. Modify the xml declaration in ```/app/main-page.xml``` file, for the MapView to look like this:
 ```
-<googleMapsPlugin:MapView mapReady="OnMapReady"/>
+<googleSDK:MapView mapReady="OnMapReady"/>
 ```
 then in the JS code behind (in ```/app/main-page.js``` file) declare the ```mapReady``` callback:
 ```
@@ -116,7 +114,7 @@ Now execute
 tns run android 
 ```
 
-and enjoy the map of Sydndey, Australia on your device.
+and enjoy the map of Syddney, Australia on your device.
 
 If you have any problems, questions or suggestions you are more than welcome to [log an issue in GitHub](https://github.com/valentinstoychev/NativeScript-GoogleSDK/issues).
 
