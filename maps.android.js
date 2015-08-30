@@ -62,8 +62,11 @@ var MapView = (function (_super) {
 
         var callbacks = new com.google.android.gms.maps.OnMapReadyCallback({
             onMapReady: function (gMap) {
-
-                that.get()._emit(MapView.mapReadyEvent);
+                var eventData = {
+                    eventName: MapView.mapReadyEvent,
+                    object: that
+                };
+                that.notify(eventData);
                 console.log("gMapsPlugin:onMapReady:GoogleMap=" + gMap);
             }
         });
